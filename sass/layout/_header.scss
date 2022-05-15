@@ -1,0 +1,122 @@
+.header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.main-nav,
+.nav.list {
+    display: flex;
+    align-items: center;
+}
+
+.nav__list {
+    position: relative;
+
+    margin-left: 93px;
+}
+
+.logo {
+    display: block;
+
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.logo__logo {
+    color: var(--logo-color);
+}
+
+.nav__list,
+.contact {
+    display: flex;
+}
+
+
+.list__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--primary-title-color);
+    text-decoration: none;
+
+    transition-property: color;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--timing-function);
+
+    &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+}
+
+
+
+.list__link.current {
+    color: var(--accent-color);
+
+    &::after {
+            position: absolute;
+            bottom: -1px;
+            content: '';
+            display: block;
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            background-color: var(--accent-color)
+        }
+}
+
+
+
+.header__contact {
+    margin-left: auto;
+}
+
+.contact__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    text-decoration: none;
+
+    transition-property: color;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--timing-function);
+
+    &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+}
+
+.contact__icon {
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+.contact__mail {
+    margin-right: 30px;
+}
+
+.list__item {
+    position: relative;
+
+    &:nth-child(n+2) {
+            margin-left: 50px;
+        }
+}
